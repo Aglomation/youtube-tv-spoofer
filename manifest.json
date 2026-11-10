@@ -1,35 +1,40 @@
 {
     "manifest_version": 2,
     "name": "YouTube TV Spoofer",
-    "version": "1.1.1",
-    "description": "Pretends to be a Nintendo Switch for YouTube.com/tv",
-    "homepage_url": "https://github.com/Muminwilmer/youtube-tv-spoofer",
+    "version": "1.2.0",
+    "description": "Unlocks the YouTube TV (Leanback) interface at youtube.com/tv on desktop by presenting a Nintendo Switch user agent.",
+    "homepage_url": "https://github.com/Aglomation/youtube-tv-spoofer",
     "author": "Vera",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{6394d080-feb5-4033-97d4-60bdcd7d792b}",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ]
+            }
+        }
+    },
     "permissions": [
         "webRequest",
         "webRequestBlocking",
         "*://www.youtube.com/tv*"
-    ],
-    "web_accessible_resources": [
-        "content.js",
-        "background.js",
-        "icons/icon-48.png",
-        "icons/icon-96.png"
     ],
     "icons": {
         "48": "icons/icon-48.png",
         "96": "icons/icon-96.png"
     },
     "background": {
-        "scripts": ["background.js"],
+        "scripts": [
+            "background.js"
+        ],
         "persistent": false
     },
     "browser_action": {
-        "default_title": "Open YouTube TV"
-    },
-    "content_scripts": [{
-        "matches": ["*://www.youtube.com/tv*"],
-        "js": ["content.js"],
-        "run_at": "document_start"
-    }]
+        "default_title": "Open YouTube TV",
+        "default_icon": {
+            "48": "icons/icon-48.png",
+            "96": "icons/icon-96.png"
+        }
+    }
 }
