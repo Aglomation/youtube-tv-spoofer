@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "YouTube TV Spoofer",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Unlocks the YouTube TV (Leanback) interface at youtube.com/tv on desktop by presenting a Nintendo Switch user agent.",
     "homepage_url": "https://github.com/Aglomation/youtube-tv-spoofer",
     "author": "Vera",
